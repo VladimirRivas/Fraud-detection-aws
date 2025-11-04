@@ -1,26 +1,26 @@
-﻿# Entorno y cache
+﻿# Entorno / cachés
 .venv/
 env/
-venv/
-__pycache__/
 *.pyc
-*.pyo
-*.pyd
+__pycache__/
 .ipynb_checkpoints/
-*.log
+*.egg-info/
+.pytest_cache/
 
-# Variables/credenciales
-.env
-*.env
-
-# Datos (ajusta según tu proyecto)
-data/raw/
-data/interim/
-data/external/
-*.sqlite
-*.db
-
-# SO/editores
-.DS_Store
-Thumbs.db
+# VSCode
 .vscode/
+
+# Datos (no versionar crudos por defecto)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Modelos y artefactos pesados
+models/*
+!models/.gitkeep
+
+# Credenciales
+.env
